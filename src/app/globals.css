@@ -1,0 +1,90 @@
+@import 'tailwindcss';
+:root {
+  --background: #ffffff;
+  --surface: #f5f5f5;
+  --border: #f3f4f6;
+  --border-hover: #ffa96e;
+  --placeholder: #999999;
+  --text: #000000;
+  --text-muted: #666666;
+  --primary: #ff7f3e;
+  --secondary: #fff7ee;
+  --primary-hover: #ff7229;
+  --danger: #e04f5f;
+  --danger-bg: #ffe4e8;
+
+  --btn-secondary-bg: var(--surface);
+  --btn-secondary-text: var(--text);
+
+  /* Buttons */
+  --btn-primary-bg: var(--primary);
+  --btn-primary-text: var(--background);
+
+  --btn-secondary-bg: var(--background);
+  --btn-secondary-text: var(--text);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+  --color-placeholder: var(--placeholder);
+
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+
+  --color-danger: var(--danger);
+  --color-danger-bg: var(--danger-bg);
+
+  --color-btn-primary-bg: var(--btn-primary-bg);
+  --color-btn-primary-text: var(--btn-primary-text);
+
+  --color-btn-secondary-bg: var(--btn-secondary-bg);
+  --color-btn-secondary-text: var(--btn-secondary-text);
+
+  /* custom font */
+  --font-primary: var(--font-libre-baskerville);
+  --font-secondary: var(--font-poppins);
+}
+
+body {
+  font-family: var(--font-secondary);
+}
+
+@layer components {
+  .app-container {
+    @apply mx-auto px-5 py-8 md:py-10 container max-w-7xl;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-primary text-text;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl font-bold leading-[1.2em];
+  }
+  h2 {
+    @apply text-2xl md:text-[32px] font-medium;
+  }
+  h3 {
+    @apply text-[28px] md:text-3xl font-semibold leading-[1.2em];
+  }
+  h5 {
+    @apply text-2xl font-medium;
+  }
+  h6 {
+    @apply text-[16px];
+  }
+  p {
+    @apply text-text-muted font-light text-sm;
+  }
+}
